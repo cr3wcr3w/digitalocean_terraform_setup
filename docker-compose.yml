@@ -21,3 +21,9 @@ services:
 #    - docker exec -it <id> sh
 # docker inspect <container>
 #    - to know the network details of the container
+
+# version
+# MAJOR.MINOR.PATCH
+#  - major: Breaking changes (e.g., API changes)
+#  - minor: New features (non-breaking)	
+#  - patch: Bug fixes or small tweaks	
