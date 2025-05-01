@@ -3,7 +3,7 @@
 variable "do_token" {}
 variable "access_id" {}
 variable "secret_key" {}
-# variable "ssh_key_pub" {}
+variable "ssh_key_pub" {}
 
 # global variable
 variable "digitalocean_region" {
@@ -22,26 +22,26 @@ variable "digitalocean_droplet_size" {
 }
 
 # variable For Database
-variable "digitalocean_database_cluster_name" {
-    default = "postgres-1"
-}
-variable "digitalocean_database_cluster_engine" {
-    default = "pg"
-}
-variable "digitalocean_database_cluster_version" {
-    default = "15"
-}
-variable "digitalocean_database_cluster_size" {
-    default = "db-s-1vcpu-1gb"
-}
-variable "digitalocean_database_cluster_node_count" {
-    default = 1
-}
+# variable "digitalocean_database_cluster_name" {
+#     default = "postgres-1"
+# }
+# variable "digitalocean_database_cluster_engine" {
+#     default = "pg"
+# }
+# variable "digitalocean_database_cluster_version" {
+#     default = "15"
+# }
+# variable "digitalocean_database_cluster_size" {
+#     default = "db-s-1vcpu-1gb"
+# }
+# variable "digitalocean_database_cluster_node_count" {
+#     default = 1
+# }
 
 # variable For Space Bucket
-variable "digitalocean_spaces_bucket_name" {
-    default = "backend-bucket"
-}
-variable "digitalocean_spaces_bucket_acl" {
-    default = "private"
-}
+# variable "digitalocean_spaces_bucket_name" {
+#     default = "backend-bucket"
+# }
+# variable "digitalocean_spaces_bucket_acl" {
+#     default = "private"
+# }
