@@ -3,7 +3,7 @@
 variable "do_token" {}
 variable "access_id" {}
 variable "secret_key" {}
-# variable "ssh_key_pub" {}
+variable "ssh_key_pub" {}
 
 # global variable
 variable "digitalocean_region" {

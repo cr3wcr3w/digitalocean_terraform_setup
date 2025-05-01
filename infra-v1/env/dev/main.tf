@@ -1,8 +1,9 @@
 # set ssh key
-# resource "digitalocean_ssh_key" "ssh-b1" {
-#   name       = "Terraform Example"
-#   public_key = file(var.ssh_key_pub)
-# }
+# ssh root@<ip>
+resource "digitalocean_ssh_key" "ssh-b1" {
+  name       = "backend-ssh"
+  public_key = file(var.ssh_key_pub)
+}
 
 # Create Droplet
 resource "digitalocean_droplet" "backend-1" {
@@ -10,7 +11,7 @@ resource "digitalocean_droplet" "backend-1" {
   name    = var.digitalocean_droplet_name
   region  = var.digitalocean_region
   size    = var.digitalocean_droplet_size
-#   ssh_keys = [digitalocean_ssh_key.ssh-b1.fingerprint]
+  ssh_keys = [digitalocean_ssh_key.ssh-b1.fingerprint]
 }
 
 # Create Database
