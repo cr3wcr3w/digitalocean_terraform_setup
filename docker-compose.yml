@@ -3,13 +3,21 @@ services:
       build: 
         context: .
         dockerfile: DockerFile
-      image: backend:latest
+      image: backend:v0.0.1
       container_name: backend
       restart: always
       ports: 
         - 8000:${BACKEND_PORT}
 
 # docker compose build
-#    - docker compose build --no-cache
+#    - docker compose build
 # docker compose up
 #    - docker compose up -d
+# create a new container 
+#    - docker run -it backend:<tag> sh
+# list of container 
+#    - docker ps -a
+# enter to existing container 
+#    - docker exec -it <id> sh
+# docker inspect <container>
+#    - to know the network details of the container
