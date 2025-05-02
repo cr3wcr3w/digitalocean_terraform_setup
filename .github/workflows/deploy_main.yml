@@ -15,8 +15,11 @@ jobs:
           username: ${{secrets.USERNAME}}
           key: ${{secrets.KEY}}
           script: |
-            rm -rf test
-            mkdir test
-            cd test
-            touch hello_world
+            cd service/${{ secrets.REPO_NAME }}
+            git reset --hard
+            git fetch origin main
+            git pull origin main
+            docker compose down
+            docker compose build --no-cache
+            docker compose up -d
             echo 'Deployment to digital ocean finished'
